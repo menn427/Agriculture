@@ -1,0 +1,216 @@
+/* General style--------------------- */
+:root {
+    --navy: #063455;
+    --green: #2E8B57;
+    --orange: #EF6800;
+    --dark-orange: #d45c00;
+    --coffee: #A68A64;
+    --cream-coffee: #F0E2D0;
+    --light-gray: #F1F1F1;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navigation bar------------------ */
+.navbar {
+    background-color: white;
+    box-shadow: 0px 1px 15px 1px rgb(0, 0, 0, .1);
+}
+
+.navbar-brand {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.logo {
+    height: 62px;
+}
+
+/* Orange buttons that carry a strong message style */
+.strong-message {
+    background-color: var(--orange);
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px 10px;
+}
+
+.strong-message:hover {
+    background-color: var(--dark-orange);
+    color: white;
+}
+
+.strong-message:focus,
+.strong-message:active .strong-message:hover {
+    color: white;
+    font-weight: bold;
+}
+
+/* Removing unnecessary Bootstrap styles */
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.strong-message:focus,
+.strong-message:active .strong-message:hover {
+    box-shadow: none;
+}
+
+.nav-link.dropdown-toggle::after {
+    content: none;
+}
+
+/* Editing navigation bar Bootstrap styles */
+.nav-link:hover,
+.dropdown-item:hover,
+.dropdown-item:active,
+.dropdown-item:focus,
+.nav-link:focus {
+    background-color: white;
+    color: var(--green);
+}
+
+/* Color of menu icon and text */
+.dark-txt,
+.navbar-toggler {
+    color: var(--navy);
+}
+
+.navbar-toggler {
+    font-size: large;
+}
+
+.nav-link {
+    font-weight: bold;
+    font-size: 16;
+}
+
+/* Adding a little space between items */
+.nav-item {
+    margin-right: 35px;
+}
+
+/* Green animated underline */
+.under-line {
+    width: fit-content;
+    position: relative;
+}
+
+.under-line::before {
+    content: ' ';
+    position: absolute;
+    background-color: var(--green);
+    margin-top: 26px;
+    width: 0%;
+    height: 2.5px;
+    transition: 0.4s;
+}
+
+.nav-link:hover .under-line::before, 
+.nav-link:focus .under-line::before {
+    width: 100%;
+}
+
+/* Footer------------------ */
+footer {
+    background-color: var(--navy);
+}
+
+.footer-element {
+    color: white;
+    font-weight: bold;
+}
+
+.footer-sub-list {
+    margin-left: 3px;
+    font-size: 14px;
+    color: white;
+}
+
+.footer-element:hover, 
+.footer-sub-list:hover {
+    color: var(--light-gray);
+}
+
+/* Article------------------ */
+
+/* Cover styles */
+.cover-container {
+    background-image: var(--bg-image); /* The image used as a cover is passed as a variable from <html style=""> */
+    background-color: var(--light-gray);
+    height: 500px; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+/* Custom container */
+.custom-container {
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+}
+
+/* Image styles */
+.article-image {
+    height: auto;
+    max-width: 100%;
+    padding-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+}
+
+/* Header styles */
+.header1 {
+    color: var(--navy);
+    font-weight: bold;
+    font-size: 40px;
+    padding-top: 36px;
+}
+
+.sub-header {
+    color: var(--navy);
+    font-weight: bold;
+    font-size: 28px;
+    padding-top: 18px;
+}
+
+.sub-header2 {
+    color: var(--navy);
+    font-weight: bold;
+    font-size: 24px;
+    padding-top: 10px;
+}
+
+ul li::marker {
+    color: var(--navy);
+}
+
+/* Paragraph styles */
+.article-paragraph {
+    color: var(--navy);
+    text-align: left;
+    font-size: 22px;
+    line-height: 1.41176;
+    margin-top: 10px; 
+}
+
+.concluding-message {
+    font-weight: bold;
+    font-size: 28px;
+    text-align: center;
+    color: var(--navy);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.concluding-message a {
+    color: var(--navy);
+}
+
+.concluding-message a:hover {
+    color: var(--orange);
+}
